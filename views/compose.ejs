@@ -1,0 +1,16 @@
+<%# Adding Header Template %>
+<%- include("partials/header") -%>
+
+<%# Main Content %>
+<h1>Compose</h1>
+<br>
+<form action="/compose" method="post">
+    <label class="form-label">Title</label>
+    <input type="text" class="form-control" name="postTitle" autocomplete="off"><br>
+    <label class="form-label">Post</label>
+    <textarea class="form-control" name="postBody" rows="5" cols="30" autocomplete="off"></textarea><br>
+  <button class="btn" type="submit" name="button">Publish</button>
+</form>
+
+<%# Adding Footer Template %>
+<%- include("partials/footer") -%>

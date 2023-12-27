@@ -1,0 +1,16 @@
+<%# Adding Header Template %>
+<%- include("partials/header") -%>
+
+<%# Main Content %>
+<h1><span>Home.<span></h1>
+<p>Hi and welcome! To Bloggers Jam.<br>
+Have a thought, an idea or a story? Have you been thinking about blogging but never really put time aside to actually start one ? Well, then you have landed on the right place.
+Compose your idea and thoughts, publish it using BloggersJam. A simple and easy way where you can share a piece of you, that you have wanted to for a long time. This is the right time to do it. Publish your first story now !!</p>
+<hr>
+<% finalPosts.forEach(function(finalPost){ %>
+  <h1><%= finalPost.title %></h1>
+  <p><%= finalPost.content.substring(0,140) + "  ..." %><a href="/posts/<%= finalPost._id %>">Keep Reading</a> </p>
+<% }) %>
+
+<%# Adding Footer Template %>
+<%- include("partials/footer") -%>
